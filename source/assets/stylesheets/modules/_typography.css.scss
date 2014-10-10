@@ -97,15 +97,12 @@ blockquote {
 
 a {
   text-decoration: none;
-  @include transition(all .2s linear);
   font-weight: 700;
-
   @extend %primary;
+  @include transition(all .2s linear);
+
   &:hover {
     @extend %tertiary;
-  }
-  &:visited {
-    @extend %secondary;
   }
 }
 
