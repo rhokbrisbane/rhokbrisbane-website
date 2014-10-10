@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "middleman", "~>3.1.5"
+gem "middleman", "~>3.3.6"
 
 # Build Support
-gem 'middleman-gh-pages'
+gem 'middleman-deploy'
