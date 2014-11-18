@@ -19,5 +19,5 @@ This projects uses [Middleman](http://middlemanapp.com/). You will need ruby ins
 
 **Deployment:**
 
-    rake build;
-    rake publish
+    bundle exec middleman build
+    bundle exec middleman deploy
