@@ -53,6 +53,12 @@ p {
   &:last-child { margin-bottom: 0; }
 }
 
+p.larger {
+  font-size: 1.125em;
+  font-weight: bold;
+  line-height: 1.45em;
+}
+
 strong, b { font-weight: bold; }
 
 em, i { font-style: italic; }

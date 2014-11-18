@@ -4,8 +4,33 @@ subtitle: 'Random hacks of kindness, hacking for humanity.'
 hero: 'index.jpg'
 ---
 
+.modal-wrapper
+  .modal-overlay
+  .modal.animated.fadeIn
+
+    %label.modal-title Ideation Evening
+
+    .modal-content
+      %p Join us to to hack against Ebola, and to hack solutions for <a href="http://www.techgirlsaresuperheroes.org/" target="_blank">Techgirlsaresuperheroes.org</a> and <a href="http://karuna.org.au/" target="_blank">Karuna.org.au</a>.
+
+      %p We will be having an 'ideation' evening <strong>this Thursday (20 Nov) at 4:30pm</strong> at NetEngine to introduce problem owners and their problems to the hackers.
+
+      %p We would love you to join us, hear about the problems, create basic teams, and start discussing potential solutions over a beer in preparation to the actual hackathon on 6-7 Dec.
+
+      %p Please can you comment on <a href="http://www.meetup.com/Rhok-Brisbane/messages/boards/thread/48512278">this discussion thread</a> letting us know you're coming, and that you can get there in time for a 4:30 kickoff. We should be done by 7pm, and will have beers and snacks - so we need a rough idea of numbers.
+
+      %p.larger Looking forward to seeing you at 7 Prospect Street, Fortitude Valley, at 4:30pm!
+
+      = link_to 'Close', '#', class: 'close'
+
 %section.first
-  .container= partial 'sections/exposition'
+  .container
+    
+    %button.open-modal.large-text Ideation evening info
+    
+    %hr
+
+    = partial 'sections/exposition'
 
 %section.second#problem
   .container
