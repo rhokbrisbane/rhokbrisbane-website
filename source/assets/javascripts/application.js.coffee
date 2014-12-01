@@ -18,10 +18,10 @@ scroll_resize = ->
 
     else
       $('.home #nav').removeClass('scrolled')
-    
+
     if scroll_top > 0
       $('.home #nav').addClass('small')
-      
+
     else
       $('.home #nav.small').removeClass('small')
 
@@ -29,22 +29,3 @@ $ ->
   if $("#problems-list").length > 0
     $("#problems-list .problem-summary").each ->
       $(this).dotdotdot()
-
-
-$(document).on 'click', '.modal .close', (e) ->
-  e.preventDefault()
-  $(this).closest('.modal-wrapper').hide()
-
-$(document).on 'click', '.modal-overlay', (e) ->
-  e.preventDefault()
-  $(this).closest('.modal-wrapper').hide()
-
-
-$(document).on 'click', '.open-modal', (e) ->
-  e.preventDefault()
-  $('.modal-wrapper').show()
-
-
-$(document).on 'keyup', (e) ->
-  if e.charCode is 0
-    $('.modal-wrapper').hide()

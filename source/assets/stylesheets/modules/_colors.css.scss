@@ -17,13 +17,13 @@ $light-secondary:             lighten($secondary, 20%);
 $tertiary:                    hsl(358,85%,52%);
 $light-tertiary:              lighten($tertiary, 20%);
 
-$palette: white               $white, 
-          off-white           $off-white, 
-          light-grey          $light-grey, 
-          mid-grey            $mid-grey, 
-          dim-grey            $dim-grey, 
+$palette: white               $white,
+          off-white           $off-white,
+          light-grey          $light-grey,
+          mid-grey            $mid-grey,
+          dim-grey            $dim-grey,
           dark-grey           $dark-grey,
-          black               $black, 
+          black               $black,
           primary             $primary,
           light-primary       $light-primary,
           secondary           $secondary,
@@ -45,7 +45,7 @@ $palette: white               $white,
     %#{ nth( $color1, 1 ) }_border-bottom { border-bottom-color: nth( $color1, 2 ) }
     %#{ nth( $color1, 1 ) }_border-left   { border-left-color: nth( $color1, 2 ) }
   }
-  
+
   @each $color2 in $palette {
     @if $color1 not $color2 {
       %#{ nth( $color1, 1 ) }_#{ nth( $color2, 1 ) } {
@@ -53,13 +53,15 @@ $palette: white               $white,
         background-color: nth( $color2, 2 );
       }
     }
-  
+
     @each $color3 in $palette {
       @if $color2 not $color3 {
-        %#{ nth( $color1, 1 ) }_#{ nth( $color2, 1 ) }_#{ nth( $color3, 1 ) } {
-          color: nth( $color1, 2 );
-          background-color: nth( $color2, 2 );
-          border-color: nth( $color3, 2 ); 
+        @if $color1 not transparent {
+          %#{ nth( $color1, 1 ) }_#{ nth( $color2, 1 ) }_#{ nth( $color3, 1 ) } {
+            color: nth( $color1, 2 );
+            background-color: nth( $color2, 2 );
+            border-color: nth( $color3, 2 );
+          }
         }
       }
     }
